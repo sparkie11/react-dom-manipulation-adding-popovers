@@ -1,0 +1,41 @@
+.box-full {
+  margin-top: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-one {
+  height: 50px;
+  width: 50px;
+  background-color: blue;
+}
+
+/* Popover container */
+.popover {
+  position: absolute;
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  font-size: 14px;
+  width: 100px;
+}
+
+/* Popover arrow */
+.popover::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the popover on hover */
+.box-one:hover .popover {
+  visibility: visible;
+}
